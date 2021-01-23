@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.body_container {
+    display:grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 0.4fr;
+    grid-template-areas: 
+        "nav nav nav nav" 
+        "sidebar main main main"
+        "sidebar c1 c2 c3"
+        "footer footer footer footer"
+        ;
+    background: rgb(0, 43, 54);
+    color: rgb(163,172,174);
+    grid-gap: 0.5rem;
+}
+
+nav{
+    grid-area: nav;
+    /**color: rgb(99,132,142);**/
+    background: rgb(0,56,71);
+    
+}
+ 
+main{
+    grid-area: main;
+    background: rgb(42, 102, 110)
+}
+
+#sidebar{
+    grid-area: sidebar;
+}
+
+#content1{
+    grid-area: c1;
+    background: rgb(42, 102, 110)
+}
+#content2{
+    grid-area: c2;
+    background: rgb(42, 102, 110)
+}
+#content3{
+    grid-area: c3;
+    background: rgb(42, 102, 110)
+}
+footer{
+    grid-area: footer;
+    background: rgb(0,56,71);
+}
+
+@media only screen and (max-width: 550px){
+    .body_container{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "nav" 
+        "sidebar"
+        "main"
+        "c1"
+        "c2"
+        "c3"
+        "footer"
+        ;
+    }
+}
+
+
+/**
+
+body{
+    font-family: 'Dosis', sans-serif;
+}
+
+header{
+    display: flex;
+    background: #eee;
+    width: 90%;
+    margin: auto;
+}
+
+.my-pic img{
+    display: flex;
+    height: 30vh;
+    margin: auto;
+}
+
+.name,.nav-links,.my-pic{
+    display:flex
+}
+.name{
+    flex:2;
+}
+nav{
+    flex:1
+}
+
+.nav-links{
+    justify-content: space-around;
+    list-style: none
+
+}
+.nav-link{
+    color:darkcyan;
+    font: size 20px;
+    text-decoration: none;
+}
+**/
